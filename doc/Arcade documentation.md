@@ -4,7 +4,7 @@ The Arcade project is a game engine which works with two different modules: one 
 Each of these modules may be swapped during runtime, when swapping a game module for another, the high scores are updated. Same when the program closes.
 When switching display modules, the game must continue to run without pause, only the display method will change.
 
-You can find documentation for each modules here:
+You can find documentation for each module type here:
 - [Game module](<Game module>)
 - [Display module](<Display module>)
 
