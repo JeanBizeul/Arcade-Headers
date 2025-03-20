@@ -2,6 +2,12 @@
 This repository contains the interfaces required to add a game or graphic module to our Arcade project.
 
 You can access the docs at [doc/Arcane Header documentation](<doc/Arcade documentation>) to learn how to create your own module.
+> [!IMPORTANT]
+> If the link does not work, it means that you are trying to read the documentation online.
+> 
+> If you want hyperlinks to work, download the repository on your local machine and open the documentation from it.
+> 
+> Due to security reason, github disables css, that why the contributors section is kinda funny.
 # Contributors
 <div style="
     display: grid;
