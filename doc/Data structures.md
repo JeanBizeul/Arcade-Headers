@@ -13,7 +13,7 @@ Sound::Sound(
 ```
 #### `std::string filePath`
 Path to the sound file.
-Sound file format support may very between each [Display module](<Display Module>) but `.wav` is always supported.
+Sound file format support may vary between each [Display module](<Display Module>) but `.wav` is always supported.
 #### `Sound::State state`
 State to put the sound in.
 ```Cpp

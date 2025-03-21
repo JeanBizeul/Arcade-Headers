@@ -9,7 +9,6 @@ class IGameModule {
         void draw(IDrawable) = 0;
         void display() = 0;
         void clear() = 0;
-        bool getIsCLI() = 0;
         EventClass getEvent() = 0;
         void handleSound(SoundClass) = 0;
 }
@@ -20,8 +19,6 @@ Displays element on window according to [IDrawable] parameters (<Data structures
 Display window with all elements in it
 #### `void clear()`
 Clear the window to prepare for the new display
-#### `bool getIsCLI()`
-Returns true if the display is in text format such as *Ncurse*.
 #### `EventClass getEvent()`
 Returns the next event in the correct format from [EventClass](<Data structures.md>) and **null** if none
 #### `void handleSound(SoundClass)`
