@@ -89,16 +89,13 @@ Represents the additional value received by the key, such as the scroll value of
 All the data for handling the window
 ```Cpp
 WindowClass::WindowClass(
-	std::pair<int, int> sizeGUI,
-	std::pair<int, int> sizeCLI,
+	std::pair<int, int> size,
 	std::string title,
 	std::string pathIcon
 );
 ```
-#### `std::pair<int, int> sizeGUI`
-Represent the x and y size of the window for the CLI display as *SFML* which will accept sizes like **1920x720**.
-#### `std::pair<int, int> sizeCLI`
-Represent the x and y size of the window for the CLI display as *ncurse* which will accept sizes like **20x20**.
+#### `std::pair<int, int> size`
+Represent the x and y size of the window for the display
 #### `std::string title`
 Represents the window title string
 #### `std::string pathIcon`
@@ -124,8 +121,7 @@ IDrawable::IDrawable(
 	float rotation,
 	std::pair<CLI_Colors, CLI_Colors> CLI_color,
 	std::tuple<int, int, int, int> GUI_color,
-	std::pair<int, int> positionGUI,
-	std::pair<int, int> positionCLI,
+	std::pair<int, int> position
 );
 ```
 #### `std::pair<float, float> scale`
@@ -146,11 +142,8 @@ For GUI, handle colors in a rgba format, value between 0 and 255
 - 3rd value : Blue
 - 4th value : Alpha
 
-#### `std::pair<int, int> positionGUI`
-Handle the position of the IDrawable in the screen for the **GUI** displays
-
-#### `std::pair<int, int> positionCLI`
-Handle the position of the IDrawable in the screen for the **CLI** displays
+#### `std::pair<int, int> position`
+Handle the position of the IDrawable in the screen for the displays
 
 ## SpriteClass : IDrawable
 SpriteClass is heriting from IDrawable so benefit of all his data

@@ -15,12 +15,14 @@ class IGameModule {
 ```
 #### `void draw(IDrawable)`
 Displays element on window according to [IDrawable] parameters (<Data structures.md>)
+- All element position are on the format GUI for CLI you will need to convert position
 #### `void display()`
 Display window with all elements in it
 #### `void clear()`
 Clear the window to prepare for the new display
 #### `EventClass getEvent()`
 Returns the next event in the correct format from [EventClass](<Data structures.md>) and **null** if none
+- All element position are on the format GUI for CLI you will need to convert position
 #### `void handleSound(SoundClass)`
 Play / stop / or loop the sound in parameter
 > The list of sounds will be stored locally in the display so that you can retrieve the current ones.
