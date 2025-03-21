@@ -14,27 +14,27 @@ class IGameModule {
 }
 ```
 #### `void Start()`
-Cette fonction est appelé au début du lancement du jeu et de la fenetre 
-Peut etre utilisé pour instancier tout les élements du jeux
+This function is called at the start of the game and window launch. 
+Can be used to instantiate all game elements
 #### `void End()`
-Cette fonction est appelé à la fermeture du jeu
+This function is called when the game is closed
 #### `bool Update(float deltaTime)`
-Cette fonction est appelé une fois par image, deltaTime contient le temps depuis le derniere update
-Cette fonction a une valeur de renvoie:
-- **false** : rien ne se passe
-- **true** : ferme le jeu (fin, défaite ... ?)
+This function is called once per frame, deltaTime contains the time since the last update.
+This function has a return value:
+- **false**: nothing happens
+- **true**: closes the game (end, defeat ... ?)
 #### `WindowClass GetWindow()`
-Cette fonction est appelé pour créer la fenetre et permet au core de récuperer une [WindowClass](<Data structures.md>) pour créer la fenetre selon les parametres
-- Il doit donc renvoyer la WindowClass
+This function is called to create the window and allows the core to retrieve a [WindowClass](<Data structures.md>) to create the window according to the parameters.
+- It must therefore return the WindowClass
 #### `std::vector<IDrawable> GetIDrawables()`
-Cette fonction est appelé chaque frame et récupère tout les [IDrawables](<Data structures.md>) du jeu a afficher
-Ils seront affiché dans l'ordre du vector (le premier de la liste sera affiché en 1er)
+This function is called every frame and retrieves all [IDrawables](<Data structures.md>) in the set to be displayed.
+They will be displayed in vector order (the first in the list will be displayed 1st)
 #### `std::vector<SoundClass> GetSounds()`
-Cette fonction est appelé chaque frame et récupère tout les [SoundClass](<Data structures.md>) du jeu à jouer / stopper / ...
-- En fonction des parametres il stoppera les sons existant, jouera des nouveaux sons etc
+This function is called every frame and retrieves all [SoundClass](<Data structures.md>) from the game to play / stop / ...
+- Depending on parameters, it will stop existing sounds, play new sounds etc.
 #### `bool Event(EventClass event)`
-Appelé à chaque evenement reçu avec en parametre un [EventClass](<Data structures.md>) qui contient les informations sur l'évenement recu et les données
+Called each time an event is received, with a parameter [EventClass](<Data structures.md>) containing information on the event received and the data.
 
-Cette fonction a une valeur de renvoie:
-- **false** : rien ne se passe
-- **true** : ferme le jeu (fin, défaite ... ?)
+This function has a return value:
+- **false**: nothing happens
+- **true**: closes the game (end, defeat ... ?)
