@@ -21,8 +21,8 @@ This function is called when the game is closed
 #### `bool Update(float deltaTime)`
 This function is called once per frame, deltaTime contains the time since the last update.
 This function has a return value:
-- **false**: nothing happens
-- **true**: closes the game (end, defeat ... ?)
+- **false**: no closing events
+- **true**: closes the game
 #### `WindowClass GetWindow()`
 This function is called to create the window and allows the core to retrieve a [WindowClass](<Data structures.md>) to create the window according to the parameters.
 - It must therefore return the WindowClass
@@ -36,5 +36,5 @@ This function is called every frame and retrieves all [SoundClass](<Data structu
 Called each time an event is received, with a parameter [EventClass](<Data structures.md>) containing information on the event received and the data.
 
 This function has a return value:
-- **false**: nothing happens
-- **true**: closes the game (end, defeat ... ?)
+- **false**: no closing events
+- **true**: closes the game
