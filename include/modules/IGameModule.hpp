@@ -20,5 +20,5 @@ class IGameModule {
         virtual Window getWindow(void) = 0;
         virtual std::vector<IDrawable> getDrawables(void) = 0;
         virtual std::vector<Sound> getSound(void) = 0;
-        virtual void event(Event event) = 0;
+        virtual void event(Event) = 0;
 };

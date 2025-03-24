@@ -10,7 +10,7 @@ class IGameModule {
         virtual Window getWindow() = 0;
         virtual std::vector<IDrawable> getDrawables() = 0;
         virtual std::vector<Sound> getSounds() = 0;
-        virtual void event(Event event) = 0;
+        virtual void event(Event) = 0;
 }
 ```
 #### `void Start()`
