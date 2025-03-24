@@ -47,7 +47,7 @@ A **non-unique sound** with a specific id **may be played multiple time in the s
 Management of in-game events (keystrokes, mouse presses, etc.)
 ```Cpp
 Event::Event(
-	enum Key key;
+	enum Key::KeyCode key;
 	any value;
 );
 
@@ -69,7 +69,7 @@ Represents the additional value received by the key, such as the scroll value of
 - NONE
 - KEY_A, KEY_ESC, KEY_UP, ...
 	- **Valeur** : `Key_Statue`
-- MOUSE_1, MOUSE_2, MOUSE_3 ...
+- MOUSE_RIGTH, MOUSE_MIDDLE, MOUSE_4 ...
 	- **Valeur** : `std::pair<MousePos, KeyStatue>`
 - MOUSE_MOVE ...
 	- **Valeur** : `MousePos`
