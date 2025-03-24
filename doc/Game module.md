@@ -4,7 +4,6 @@ The interface with all the functions to implement to develop your game
 ```Cpp
 class IGameModule {
     public:
-        void End() = 0;
         void Update(float deltaTime) = 0;
         WindowClass GetWindow() = 0;
         std::vector<IDrawable> GetIDrawables() = 0;
@@ -12,8 +11,6 @@ class IGameModule {
         void Event(EventClass event) = 0;
 }
 ```
-#### `void End()`
-This function is called when the game is closed
 #### `bool Update(float deltaTime)`
 This function is called once per frame, deltaTime contains the time since the last update.
 This function has a return value:
