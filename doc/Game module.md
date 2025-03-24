@@ -4,11 +4,11 @@ The interface with all the functions to implement to develop your game
 ```Cpp
 class IGameModule {
     public:
-        void Update(float deltaTime) = 0;
+        bool Update(float deltaTime) = 0;
         WindowClass GetWindow() = 0;
         std::vector<IDrawable> GetIDrawables() = 0;
         std::vector<SoundClass> GetSounds() = 0;
-        void Event(EventClass event) = 0;
+        bool Event(EventClass event) = 0;
 }
 ```
 #### `bool Update(float deltaTime)`
