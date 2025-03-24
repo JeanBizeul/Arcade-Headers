@@ -38,3 +38,7 @@ Called each time an event is received, with a parameter [EventClass](<Data struc
 This function has a return value:
 - **false**: no closing events
 - **true**: closes the game
+
+## Positions format
+Pour toutes les images il faut utiliser le format "GUI" donc 1280x720 par exemple
+Vos IDisplay doivent donc gérer le formattage de ces donnés pour les transformer en versions "CLI"
