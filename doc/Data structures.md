@@ -87,14 +87,14 @@ All the data for handling the window
 WindowClass::WindowClass(
 	std::pair<int, int> size,
 	std::string title,
-	std::string pathIcon
+	std::string iconPath
 );
 ```
 #### `std::pair<int, int> size`
 Represent the x and y size of the window for the display
 #### `std::string title`
 Represents the window title string
-#### `std::string pathIcon`
+#### `std::string iconPath`
 Represents the image path for the window icon
 
 # IDrawable
