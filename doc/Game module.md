@@ -4,7 +4,6 @@ The interface with all the functions to implement to develop your game
 ```Cpp
 class IGameModule {
     public:
-        void Start() = 0;
         void End() = 0;
         void Update(float deltaTime) = 0;
         WindowClass GetWindow() = 0;
@@ -13,9 +12,6 @@ class IGameModule {
         void Event(EventClass event) = 0;
 }
 ```
-#### `void Start()`
-This function is called at the start of the game and window launch. 
-Can be used to instantiate all game elements
 #### `void End()`
 This function is called when the game is closed
 #### `bool Update(float deltaTime)`
