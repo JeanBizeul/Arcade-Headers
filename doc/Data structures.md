@@ -46,21 +46,20 @@ A **non-unique sound** with a specific id **may be played multiple time in the s
 
 Management of in-game events (keystrokes, mouse presses, etc.)
 ```Cpp
-EventClass::EventClass(
+Event::Event(
 	enum Key key;
 	any value;
 );
 
-enum KeyStatue {
+enum KeyStatus {
 	KEY_PRESSED,
 	KEY_RELEASED
 };
 
 struct MousePos {
-	int x,
-	int y,
-	bool isCLI
-}
+	int x;
+	int y;
+};
 ```
 #### `enum Key key`
 Represents the event received, e.g. KEY_B for pressing the B key, MOUSE_1 for the left click, etc.
@@ -68,7 +67,7 @@ Represents the event received, e.g. KEY_B for pressing the B key, MOUSE_1 for th
 Represents the additional value received by the key, such as the scroll value of the scroll wheel, the position of the mouse in the event of movement, etc.
 #### Valeurs
 - NONE
-- KEY_A, KEY_ESC, KEY_UP, ... 
+- KEY_A, KEY_ESC, KEY_UP, ...
 	- **Valeur** : `Key_Statue`
 - MOUSE_1, MOUSE_2, MOUSE_3 ...
 	- **Valeur** : `std::pair<MousePos, KeyStatue>`
@@ -82,9 +81,6 @@ Represents the additional value received by the key, such as the scroll value of
 - **KEY_RELEASED** : the key was pressed and is not anymore
 #### `struct MousePos`
 - **x, y** : position of the mouse on the screen
-- **isCLI** : allow to now in wich format of position handle the mouse event
-	- **true** : the display is a CLI displayer
-	- **false** : the display is a GUI displayer
 # WindowClass
 All the data for handling the window
 ```Cpp
