@@ -101,7 +101,7 @@ Represents the image path for the window icon
 The interface of all drawable content (image & text)
 
 ```Cpp
-enum CLI_Colors {
+enum CLI_Color {
 	CLI_BLACK,
 	CLI_RED,
 	CLI_GREEN,
@@ -115,7 +115,7 @@ enum CLI_Colors {
 IDrawable::IDrawable(
 	std::pair<float, float> scale,
 	float rotation,
-	std::pair<CLI_Colors, CLI_Colors> CLI_color,
+	std::pair<CLI_Color, CLI_Color> CLI_color,
 	std::tuple<int, int, int, int> GUI_color,
 	std::pair<int, int> position
 );
@@ -126,8 +126,8 @@ For GUI displayers, handle the scale X and Y of the content
 #### `float rotation`
 For GUI displayers, handle the rotation of the content
 - `180` for a half-turn
-#### `std::pair<CLI_Colors, CLI_Colors> CLI_color`
-For CLI, handle the colors of the text & background from the enum CLI_Colors
+#### `std::pair<CLI_Color, CLI_Color> CLI_color`
+For CLI, handle the colors of the text & background from the enum CLI_Color
 - The first value is for the character color
 - The second value is for the background color
 
