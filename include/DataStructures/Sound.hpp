@@ -8,7 +8,8 @@
 #pragma once
 #include <string>
 
-class Sound {
+class Sound
+{
     public:
         enum State {
             PLAY,
