@@ -4,7 +4,7 @@ The interface with all the functions to implement to develop your game
 > The Window will be store localy in the displayModule
 
 ```Cpp
-class IGameModule {
+class IDisplayModule {
     public:
         void draw(IDrawable) = 0;
         void display() = 0;
