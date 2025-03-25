@@ -4,6 +4,9 @@ The interface with all the functions to implement to develop your game
 > The Window will be store localy in the displayModule
 
 ```Cpp
+
+std::unique_ptr<IDisplayModule> getDisplayModule();
+
 class IDisplayModule {
     public:
         void draw(IDrawable) = 0;
@@ -13,6 +16,9 @@ class IDisplayModule {
         void handleSound(Sound) = 0;
 }
 ```
+#### getDisplayModule()
+return a make_unique pointer of the DipslayModule to get the module class
+
 #### `void draw(IDrawable)`
 Displays element on window according to [IDrawable](<Data structures.md>) parameters.
 
