@@ -13,14 +13,6 @@
 class IDrawable
 {
     public:
-        IDrawable(
-            std::pair<float, float> scale,
-            float rotation,
-            std::pair<CLI_Color, CLI_Color> CLI_Color,
-            std::tuple<int, int, int, int> GUI_Color,
-            std::pair<int, int> position
-        ) = delete;
-
         virtual std::pair<float, float> getScale() const = 0;
         virtual float getRotation() const = 0;
         virtual std::pair<CLI_Color, CLI_Color> getCLI_Color() const = 0;
