@@ -1,9 +1,12 @@
 # Display module
 The interface with all the functions to implement to develop your game
 
-> The Window will be store localy in the displayModule
+> [!INFO] The Window will be store localy in the displayModule
 
 ```Cpp
+
+std::unique_ptr<IDisplayModule> getDisplayModule(void);
+
 class IDisplayModule {
     public:
 	    virtual void createWindow(const Window &) = 0;
@@ -16,7 +19,10 @@ class IDisplayModule {
 ```
 
 #### `void createWindow(Window window)`
-
+Takes a [Window Data Class](<Data structures.md#Window>) and creates a new window according to it's parameters.
+#### `std::unique_ptr<IDisplayModule> getDisplayModule(void)`
+This is the entry point which is going to be called from the core to retrieve the displayModule.
+Return a std::unique_pointer to the current implementation of the displayModule.
 #### `void draw(IDrawable)`
 Displays element on window according to [IDrawable Data Class](<Data structures.md#IDrawable>) parameters.
 

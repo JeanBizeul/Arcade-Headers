@@ -2,6 +2,9 @@
 The interface with all the functions to implement to develop your game
 
 ```Cpp
+
+std::unique_ptr<IGameModule> getGameModule(void);
+
 class IGameModule {
     public:
         virtual void start(void) = 0;
@@ -13,11 +16,9 @@ class IGameModule {
         virtual void event(const Event &) = 0;
 }
 ```
-#### `void Start()`
-This function is called at the start of the game and window launch. 
-Can be used to instantiate all game elements.
-#### `void End()`
-This function is called when the game is closed.
+#### `std::unique_ptr<IGameModule> getGameModule(void)`
+This is the entry point which is going to be called from the core to retrieve the gameModule.
+Return a std::unique_pointer to the current implementation of the gameModule.
 #### `bool Update(float deltaTime)`
 This function is called once per frame, deltaTime contains the time since the last update.
 This function has a return value:
