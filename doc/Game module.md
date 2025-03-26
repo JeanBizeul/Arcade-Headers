@@ -7,8 +7,6 @@ std::unique_ptr<IGameModule> getGameModule();
 
 class IGameModule {
     public:
-        virtual void start() = 0;
-        virtual void end() = 0;
         virtual void update(float deltaTime) = 0;
         virtual Window getWindow() = 0;
         virtual std::vector<IDrawable> getDrawables() = 0;
@@ -19,11 +17,6 @@ class IGameModule {
 #### getGameModule()
 return a make_unique pointer of the GameModule to get the module class
 
-#### `void Start()`
-This function is called at the start of the game and window launch. 
-Can be used to instantiate all game elements.
-#### `void End()`
-This function is called when the game is closed.
 #### `bool Update(float deltaTime)`
 This function is called once per frame, deltaTime contains the time since the last update.
 This function has a return value:
