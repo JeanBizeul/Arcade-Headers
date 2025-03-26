@@ -81,7 +81,7 @@ Represents the additional value received by the key, such as the scroll value of
 - **KEY_RELEASED** : the key was pressed and is not anymore
 #### `struct MousePos`
 - **x, y** : position of the mouse on the screen
-# WindowClass
+# Window
 All the data for handling the window
 ```Cpp
 WindowClass::WindowClass(
@@ -141,13 +141,13 @@ For GUI, handle colors in a rgba format, value between 0 and 255
 #### `std::pair<int, int> position`
 Handle the position of the IDrawable in the screen for the displays
 
-## SpriteClass : IDrawable
-SpriteClass is heriting from IDrawable so benefit of all his data
+## Sprite : IDrawable
+Sprite is heriting from IDrawable so benefit of all his data
 
 ```Cpp
-class SpriteClass : public IDrawable;
+class Sprite : public IDrawable;
 
-SpriteClass::SpriteClass(
+Sprite::Sprite(
 	std::vector<std::string> GUI_Textures,
 	std::vector<char[2]>  CLI_Textures,
 	float animationTime,
@@ -165,13 +165,13 @@ CLI_Textures is the list of 2 charactere for the "texture" of the text format ga
 #### `float animationTime`
 This will be the animation time variable, each animationTime the texture will change for the next one
 
-## TextClass : IDrawable
+## Text : IDrawable
 TextClass is heriting from IDrawable so benefit of all his data
 
 ```Cpp
-class TextClass : public IDrawable;
+class Text : public IDrawable;
 
-TextClass::TextClass(
+Text::Text(
 	std::string fontPath,
 	std::string str
 );

@@ -6,23 +6,27 @@ The interface with all the functions to implement to develop your game
 ```Cpp
 class IDisplayModule {
     public:
-        void draw(IDrawable) = 0;
-        void display() = 0;
-        void clear() = 0;
-        Event getEvent() = 0;
-        void handleSound(Sound) = 0;
+	    virtual void createWindow(const Window &) = 0;
+        virtual void draw(const IDrawable &) = 0;
+        virtual void display(void) = 0;
+        virtual void clear(void) = 0;
+        virtual Event getEvent(void) = 0;
+        virtual void handleSound(const Sound &) = 0;
 }
 ```
+
+#### `void createWindow(Window window)`
+
 #### `void draw(IDrawable)`
-Displays element on window according to [IDrawable](<Data structures.md>) parameters.
+Displays element on window according to [IDrawable Data Class](<Data structures.md#IDrawable>) parameters.
 
 All element position are on the format GUI for CLI you will need to convert position.
-#### `void display()`
+#### `void display(void)`
 Display window with all elements in it.
-#### `void clear()`
+#### `void clear(void)`
 Clear the window to prepare for the new display.
-#### `EventClass getEvent()`
-Returns the next event in the correct format from as an [Event Data Class](<Data structures.md>) and **null** if none.
+#### `EventClass getEvent(void)`
+Returns the next event in the correct format from as an [Event Data Class](<Data structures.md#Event>) and **null** if none.
 
 All element position are on the format GUI for CLI you will need to convert position.
 #### `void handleSound(SoundClass)`
