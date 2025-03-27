@@ -8,7 +8,7 @@
 #pragma once
 
 enum CLI_Color {
-    CLI_BLACk,
+    CLI_BLACK,
     CLI_RED,
     CLI_GREEN,
     CLI_YELLOW,
