@@ -14,6 +14,7 @@ class IGameModule {
         virtual std::vector<IDrawable> getDrawables(void) = 0;
         virtual std::vector<Sound> getSounds(void) = 0;
         virtual void event(const Event &) = 0;
+        virtual std::vector<std::pair<std::string, int>> getScores(void) = 0;
 }
 ```
 #### `std::unique_ptr<IGameModule> getGameModule(void)`
@@ -41,6 +42,16 @@ Called each time an event is received, with a parameter [Event Data Class](<Data
 This function has a return value:
 - **false**: no closing events
 - **true**: closes the game
+
+#### `void getScores(void)`
+This function will get called before the core unloads the game module.
+
+It must return a vector of all scores done in this session.
+
+The format of the scores is the following:
+```Cpp
+std::pair<std::String, int> score({"Joe", 23350});
+```
 
 ## Positions format
 Pour toutes les images il faut utiliser le format "GUI" donc 1280x720 par exemple
