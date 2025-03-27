@@ -1,7 +1,7 @@
-# Arcane Headers
+# Arcade Headers
 This repository contains the interfaces required to add a game or graphic module to our Arcade project.
 
-You can access the docs at [doc/Arcane Header documentation](<doc/Arcade documentation>) to learn how to create your own module.
+You can access the docs at [doc/Arcade Header documentation](<doc/Arcade documentation>) to learn how to create your own module.
 > [!IMPORTANT]
 > If the link does not work, it means that you are trying to read the documentation online.
 > 
