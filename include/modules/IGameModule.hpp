@@ -15,13 +15,11 @@
 
 class IGameModule {
     public:
-        virtual void start(void) = 0;
-        virtual void end(void) = 0;
-        virtual void update(float deltaTime) = 0;
+        virtual bool update(float deltaTime) = 0;
         virtual const Window &getWindow(void) = 0;
-        virtual const std::vector<IDrawable> &getDrawables(void) = 0;
+        virtual const std::vector<std::unique_ptr<IDrawable>> &getDrawables(void) = 0;
         virtual const std::vector<Sound> &getSound(void) = 0;
-        virtual void event(const Event &events) = 0;
+        virtual bool event(const Event &events) = 0;
         virtual std::vector<std::pair<std::string, int>> getScores(void) = 0;
 };
 
