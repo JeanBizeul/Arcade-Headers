@@ -69,16 +69,16 @@ Represents the additional value received by the key, such as the scroll value of
 - NONE
 - KEY_A, KEY_ESC, KEY_UP, ...
 	- **Value** : `Key_Statue`
-- MOUSE_RIGTH, MOUSE_MIDDLE, MOUSE_4 ...
-	- **Value** : `std::pair<MousePos, KeyStatue>`
+- MOUSE_RIGHT, MOUSE_MIDDLE, MOUSE_4 ...
+	- **Value** : `std::pair<MousePos, KeyStatus>`
 - MOUSE_MOVE ...
 	- **Value** : `MousePos`
 - MOUSE_WHEEL
 	- **Value** : `std::pair<MousePos, float delta>`
 
-#### `enum KeyStatue`
+#### `enum KeyStatus`
 - **KEY_PRESSED** : the key is pressed
-- **KEY_RELEASED** : the key was pressed and is not anymore
+- **KEY_RELEASED** : the key has been released (was pressed and is not anymore)
 #### `struct MousePos`
 - **x, y** : position of the mouse on the screen
 # Window
