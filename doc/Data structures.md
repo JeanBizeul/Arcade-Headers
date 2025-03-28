@@ -62,19 +62,23 @@ struct MousePos {
 };
 ```
 #### `enum Key key`
-Represents the event received, e.g. KEY_B for pressing the B key, MOUSE_1 for the left click, etc.
+Represents the event received, e.g. KEY_B for pressing the B key, MOUSE_1 for
+the left click, etc.
 #### `any value`
-Represents the additional value received by the key, such as the scroll value of the scroll wheel, the position of the mouse in the event of movement, etc.
+Represents any additional value received by the key, such as the delta
+of the scroll wheel action, the position of the mouse in the event of movement,
+etc.
 #### Values
 - NONE
 - KEY_A, KEY_ESC, KEY_UP, ...
-	- **Value** : `Key_Statue`
+	- **Value** : `Key_Status`
 - MOUSE_RIGHT, MOUSE_MIDDLE, MOUSE_4 ...
 	- **Value** : `std::pair<MousePos, KeyStatus>`
 - MOUSE_MOVE ...
 	- **Value** : `MousePos`
 - MOUSE_WHEEL
 	- **Value** : `std::pair<MousePos, float delta>`
+	- The delta parameter is positive if the user is scrolling up, negative if scrolling down
 
 #### `enum KeyStatus`
 - **KEY_PRESSED** : the key is pressed
