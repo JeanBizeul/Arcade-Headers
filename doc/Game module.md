@@ -1,8 +1,8 @@
 # Game Module
+
 The interface with all the functions to implement to develop your game
 
 ```Cpp
-
 std::unique_ptr<IGameModule> getGameModule(void);
 
 class IGameModule {
@@ -54,5 +54,5 @@ std::pair<std::String, int> score({"Joe", 23350});
 ```
 
 ## Positions format
-Pour toutes les images il faut utiliser le format "GUI" donc 1280x720 par exemple
-Vos IDisplay doivent donc gérer le formattage de ces donnés pour les transformer en versions "CLI"
+For all images, you must use the "GUI" format, such as 1280x720.
+Your IDisplay must therefore handle formatting this data to transform it into "CLI" versions.
