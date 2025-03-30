@@ -7,11 +7,12 @@
 
 #pragma once
 #include <vector>
-#include "Window.hpp"
-#include "IDrawable.hpp"
-#include "Sound.hpp"
-#include "Event.hpp"
 #include <memory>
+
+#include "../DataStructures/Window.hpp"
+#include "../DataStructures/IDrawable.hpp"
+#include "../DataStructures/Sound.hpp"
+#include "../DataStructures/Event.hpp"
 
 class IGameModule {
     public:

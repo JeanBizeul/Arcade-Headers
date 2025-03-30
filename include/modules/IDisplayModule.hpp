@@ -6,11 +6,12 @@
 */
 
 #pragma once
-#include "IDrawable.hpp"
-#include "Event.hpp"
-#include "Sound.hpp"
-#include "Window.hpp"
 #include <memory>
+
+#include "../DataStructures/IDrawable.hpp"
+#include "../DataStructures/Event.hpp"
+#include "../DataStructures/Sound.hpp"
+#include "../DataStructures/Window.hpp"
 
 class IDisplayModule
 {
