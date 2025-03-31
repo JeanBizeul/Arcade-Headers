@@ -9,6 +9,7 @@ std::unique_ptr<IDisplayModule> getDisplayModule(void);
 
 class IDisplayModule {
     public:
+        virtual ~IDisplayModule() = 0;
 	    virtual void createWindow(const Window &) = 0;
         virtual void draw(const IDrawable &) = 0;
         virtual void display(void) = 0;
@@ -17,7 +18,8 @@ class IDisplayModule {
         virtual void handleSound(const Sound &) = 0;
 }
 ```
-
+### `~IDisplayModule()`
+This a pure virtual destructor, it will be override by the current implementation, for proper destruction.
 #### `void createWindow(Window window)`
 Takes a [Window Data Class](<Data structures.md#Window>) and creates a new window according to it's parameters.
 #### `std::unique_ptr<IDisplayModule> getDisplayModule(void)`

@@ -7,8 +7,7 @@ std::unique_ptr<IGameModule> getGameModule(void);
 
 class IGameModule {
     public:
-        virtual void start(void) = 0;
-        virtual void end(void) = 0;
+        virtual ~IGameModule() = 0;
         virtual void update(float deltaTime) = 0;
         virtual Window getWindow(void) = 0;
         virtual std::vector<IDrawable> getDrawables(void) = 0;
@@ -17,6 +16,9 @@ class IGameModule {
         virtual std::vector<std::pair<std::string, int>> getScores(void) = 0;
 }
 ```
+
+### `~IGameModule()`
+This a pure virtual destructor, it will be override by the current implementation, for proper destruction.
 #### `std::unique_ptr<IGameModule> getGameModule(void)`
 This is the entry point which is going to be called from the core to retrieve the gameModule.
 Return a std::unique_pointer to the current implementation of the gameModule.
