@@ -24,4 +24,4 @@ class IGameModule {
         virtual std::vector<std::pair<std::string, int>> getScores(void) = 0;
 };
 
-std::unique_ptr<IGameModule> getGameModule();
+// extern "C" std::unique_ptr<IGameModule> getGameModule();

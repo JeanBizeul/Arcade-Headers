@@ -3,7 +3,8 @@
 The interface with all the functions to implement to develop your game
 
 ```Cpp
-std::unique_ptr<IGameModule> getGameModule(void);
+// Should not be in the header but as extern "C"
+// std::unique_ptr<IGameModule> getGameModule(void);
 
 class IGameModule {
     public:
@@ -19,7 +20,7 @@ class IGameModule {
 
 ### `~IGameModule()`
 This a pure virtual destructor, it will be override by the current implementation, for proper destruction.
-#### `std::unique_ptr<IGameModule> getGameModule(void)`
+#### `extern "C" std::unique_ptr<IGameModule> getGameModule(void)`
 This is the entry point which is going to be called from the core to retrieve the gameModule.
 Return a std::unique_pointer to the current implementation of the gameModule.
 #### `bool Update(float deltaTime)`
