@@ -1,14 +1,14 @@
 # Game Module
+
 The interface with all the functions to implement to develop your game
 
 ```Cpp
-
-std::unique_ptr<IGameModule> getGameModule(void);
+// Should not be in the header but as extern "C"
+// std::unique_ptr<IGameModule> getGameModule(void);
 
 class IGameModule {
     public:
-        virtual void start(void) = 0;
-        virtual void end(void) = 0;
+        virtual ~IGameModule() = 0;
         virtual void update(float deltaTime) = 0;
         virtual Window getWindow(void) = 0;
         virtual std::vector<IDrawable> getDrawables(void) = 0;
@@ -17,7 +17,10 @@ class IGameModule {
         virtual std::vector<std::pair<std::string, int>> getScores(void) = 0;
 }
 ```
-#### `std::unique_ptr<IGameModule> getGameModule(void)`
+
+### `~IGameModule()`
+This a pure virtual destructor, it will be override by the current implementation, for proper destruction.
+#### `extern "C" std::unique_ptr<IGameModule> getGameModule(void)`
 This is the entry point which is going to be called from the core to retrieve the gameModule.
 Return a std::unique_pointer to the current implementation of the gameModule.
 #### `bool Update(float deltaTime)`
@@ -54,5 +57,5 @@ std::pair<std::String, int> score({"Joe", 23350});
 ```
 
 ## Positions format
-Pour toutes les images il faut utiliser le format "GUI" donc 1280x720 par exemple
-Vos IDisplay doivent donc gérer le formattage de ces donnés pour les transformer en versions "CLI"
+For all images, you must use the "GUI" format, such as 1280x720.
+Your IDisplay must therefore handle formatting this data to transform it into "CLI" versions.

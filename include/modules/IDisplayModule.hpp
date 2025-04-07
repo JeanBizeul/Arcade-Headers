@@ -14,6 +14,11 @@
 #include "Window.hpp"
 #include <memory>
 
+#include "../DataStructures/IDrawable.hpp"
+#include "../DataStructures/Event.hpp"
+#include "../DataStructures/Sound.hpp"
+#include "../DataStructures/Window.hpp"
+
 class IDisplayModule
 {
     public:
@@ -24,4 +29,6 @@ class IDisplayModule
         virtual void clear(void) = 0;
         virtual Event getEvent(void) = 0;
         virtual void handleSound(const Sound &sound) = 0;
-};
+};                                                                             
+
+std::unique_ptr<IDisplayModule> getDisplayModule();

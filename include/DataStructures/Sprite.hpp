@@ -16,10 +16,13 @@ public:
     std::vector<std::string> getGUI_Textures(void) const;
     const std::vector<std::string> &getCLI_Textures() const;
     float getAnimationTime(void) const;
+    unsigned int getCurrentTexture(void) const;
     void setGUI_Textures(std::vector<std::string> GUI_Textures);
     void setCLI_Textures(std::vector<std::string> CLI_Textures);
     void setAnimationTime(float animationTime);
 
+    void setCurrentTexture(unsigned int currentTexture);
+    unsigned int getCurrentTexture(void) const;
     std::pair<float, float> getScale(void) const override;
     float getRotation(void) const override;
     std::pair<CLI_Color, CLI_Color> getCLI_Color(void) const override;
@@ -30,6 +33,7 @@ public:
     void setCLI_Color(std::pair<CLI_Color, CLI_Color> CLI_Color) override;
     void setGUI_Color(std::tuple<int, int, int, int> GUI_Color) override;
     void setPosition(std::pair<int, int> position) override;
+
 private:
     std::vector<std::string> GUI_Textures;
 	std::vector<std::string> CLI_Textures;
@@ -39,4 +43,5 @@ private:
 	std::pair<CLI_Color, CLI_Color> CLI_color;
 	std::tuple<int, int, int, int> GUI_color;
 	std::pair<int, int> position;
+    unsigned int currentTexture;
 };

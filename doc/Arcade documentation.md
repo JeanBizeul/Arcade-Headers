@@ -5,7 +5,7 @@ Each of these modules may be swapped during runtime, when swapping a game module
 When switching display modules, the game must continue to run without pause, only the display method will change.
 
 You can find documentation for each module type here:
-- [Game module](<Game module>)
-- [Display module](<Display module>)
+- [Game module](<Game module.md>)
+- [Display module](<Display module.md>)
 
 The exhaustive list of all data structures used to exchange data between modules and the core can be found [here](<Data structures.md>).
