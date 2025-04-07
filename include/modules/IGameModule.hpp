@@ -9,13 +9,14 @@
 #include <vector>
 #include <memory>
 
-#include "../DataStructures/Window.hpp"
-#include "../DataStructures/IDrawable.hpp"
-#include "../DataStructures/Sound.hpp"
-#include "../DataStructures/Event.hpp"
+#include "Window.hpp"
+#include "IDrawable.hpp"
+#include "Sound.hpp"
+#include "Event.hpp"
 
 class IGameModule {
     public:
+        virtual ~IGameModule() = default;
         virtual bool update(float deltaTime) = 0;
         virtual const Window &getWindow(void) = 0;
         virtual const std::vector<std::unique_ptr<IDrawable>> &getDrawables(void) = 0;

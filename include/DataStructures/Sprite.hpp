@@ -22,14 +22,13 @@ public:
     void setAnimationTime(float animationTime);
 
     void setCurrentTexture(unsigned int currentTexture);
-    unsigned int getCurrentTexture(void) const;
     std::pair<float, float> getScale(void) const override;
     float getRotation(void) const override;
     std::pair<CLI_Color, CLI_Color> getCLI_Color(void) const override;
     std::tuple<int, int, int, int> getGUI_Color(void) const override;
     std::pair<int, int> getPosition(void) const override;
     void setScale(std::pair<float, float> scale) override;
-    void setRotation(float rotation) override { this->rotation = rotation; };
+    void setRotation(float rotation) override;
     void setCLI_Color(std::pair<CLI_Color, CLI_Color> CLI_Color) override;
     void setGUI_Color(std::tuple<int, int, int, int> GUI_Color) override;
     void setPosition(std::pair<int, int> position) override;
