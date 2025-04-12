@@ -169,11 +169,11 @@ Sprite is heriting from IDrawable so benefit of all his data
 ```Cpp
 class Sprite : public IDrawable {
 	std::vector<std::string> getGUI_Textures(void) const;
-    std::vector<char[2]> getCLI_Textures(void) const;
+    std::vector<std::string> getCLI_Textures(void) const;
     float getAnimationTime(void) const;
 	unsigned int getCurrentTexture(void) const;
     void setGUI_Textures(std::vector<std::string> GUI_Textures);
-    void setCLI_Textures(std::vector<char[2]> CLI_Textures);
+    void setCLI_Textures(std::vector<std::string> CLI_Textures);
     void setAnimationTime(float animationTime);
 	void setCurrentTexture(unsigned int currentTexture);
 
@@ -181,7 +181,7 @@ class Sprite : public IDrawable {
 }
 //Variables
 	//std::vector<std::string> GUI_Textures,
-	//std::vector<char[2]>  CLI_Textures,
+	//std::vector<std::string>  CLI_Textures,
 	//float animationTime,
 
 
@@ -190,8 +190,8 @@ class Sprite : public IDrawable {
 GUI_Textures is the list of all the path for the animations of the texture
 - If only one texture is in the vector there will be no animation*
 
-#### `std::vector<char[2]>  CLI_Textures`
-CLI_Textures is the list of 2 charactere for the "texture" of the text format game
+#### `std::vector<std::string>  CLI_Textures`
+CLI_Textures is the string of 2 charactere for the "texture" of the text format game
 - Format will be like `"| "` for a wall
 - If only one texture is in the vector there will be no animation
 
